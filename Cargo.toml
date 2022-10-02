@@ -1,15 +1,30 @@
 [package]
-name = "mossum-rs"
-version = "0.1.0"
-edition = "2021"
+    edition = "2021"
+    name    = "mossum-rs"
+    version = "0.1.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+    name = "libmossviz"
+    path = "src/lib/lib.rs"
+
+[[bin]]
+    name = "mviz"
+    path = "src/cli/moss-viz.rs"
 
 [dependencies]
-reqwest = { version = "0.11.12", features = ["blocking"] }
-scraper = "0.13.0"
-json = "0.12.4"
-lazy_static = "1.4.0"
-# dot_graph = "0.2.3"
-dot_graph = { git = "https://github.com/ianakotey/dot_graph" }
-regex = "1.6.0"
+    clap          = { version = "4.0.8", features = ["derive"] }
+    # dot_graph = "0.2.3"
+    dot_graph     = { git = "https://github.com/ianakotey/dot_graph" }
+    extend        = "^1.1.2"
+    getset-scoped = "0.1.2"
+    glob          = "^0.3.0"
+    json          = "0.12.4"
+    lazy_static   = "1.4.0"
+    regex         = "1.6.0"
+    reqwest       = { version = "0.11.12", features = ["blocking"] }
+    scraper       = "0.13.0"
+    shellexpand   = "^2.1.0"
+    snafu         = "0.7.1"
+    wild          = "2.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
