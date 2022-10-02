@@ -1,0 +1,15 @@
+[package]
+name = "mossum-rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.12", features = ["blocking"] }
+scraper = "0.13.0"
+json = "0.12.4"
+lazy_static = "1.4.0"
+# dot_graph = "0.2.3"
+dot_graph = { git = "https://github.com/ianakotey/dot_graph" }
+regex = "1.6.0"
